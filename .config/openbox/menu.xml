@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="system-menu" label="Ayarlar">
+  <item label="Çözünürlük Ayarları">
+    <action name="Execute">
+      <command>arandr</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Tema Ayarları">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Duvarkağıdı Ayarları">
+    <action name="Execute">
+      <command>nitrogen</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Openbox Ayarları">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Xfce Ayarları">
+    <action name="Execute">
+      <command>xfce-setting-show</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+  <item label="Refresh Conky">
+  <action name="Execute">
+    <command>~/.config/conky/restart-conky.sh</command>
+    <startupnotify><enabled>yes</enabled></startupnotify>
+  </action>
+</item>
+  <item label="Refresh Polybar">
+    <action name="Execute">
+      <command>polybar -r mybar</command>      
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Refresh Openbox">
+    <action name="Restart">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+</menu>
+<!-- 
+#######################################
+## Mustafa'nın eklediği Script Menüleri
+####################################### 
+-->
+<menu
+   id="menu-places"
+   label="Dizinler"
+   execute="sh -c ~/.config/openbox/scripts/places"
+/>
+<menu
+   id="menu-apps"
+   label="Uygulamalar"
+   execute="sh -c ~/.config/openbox/scripts/apps"
+/>
+
+<!--
+####################################### 
+-->
+<menu id="root-menu" label="Openbox 3">  
+  <menu id="menu-places"/>
+  <menu id="menu-apps"/>
+  <separator />
+  <menu id="system-menu"/>
+  <separator />
+    <item label="Scroll Lock">
+    <action name="Execute">
+      <command>sh -c ~/.config/openbox/scripts/scroll-lock-toggle</command>      
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+    <item label="Çıkış">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <item label="Kapat">
+    <action name="Execute">
+	  <prompt>Bilgisayar kapatılsın mı?</prompt>
+      <command>shutdown -h now</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+</menu>
+
+</openbox_menu>

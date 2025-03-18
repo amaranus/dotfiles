@@ -1,0 +1,1 @@
+xset q | grep -q 'Scroll Lock: off' && xset led named 'Scroll Lock' || xset -led named 'Scroll Lock'

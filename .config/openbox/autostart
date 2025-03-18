@@ -1,0 +1,68 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# If you want to use GNOME config tools...
+#
+#if test -x /usr/lib/openbox/gnome-settings-daemon >/dev/null; then
+#  /usr/lib/openbox/gnome-settings-daemon &
+#elif which gnome-settings-daemon >/dev/null 2>&1; then
+#  gnome-settings-daemon &
+#fi
+
+# If you want to use XFCE config tools...
+#
+#xfce-mcs-manager &
+(sleep 3s && /usr/lib/mate-polkit/polkit-mate-authentication-agent-1) &
+
+#------------------------------------------------------------
+# Çözünürlüğü ayarla
+#------------------------------------------------------------
+xrandr --size 1920x1080 &
+
+#------------------------------------------------------------
+# tint2 barı başlat
+#------------------------------------------------------------
+# tint2 &
+
+#------------------------------------------------------------
+# Polybarı başlat
+#------------------------------------------------------------
+$HOME/.config/polybar/launch.sh &
+
+#------------------------------------------------------------
+# Picomu başlat
+#------------------------------------------------------------
+picom --config ~/.config/picom.conf --daemon & 
+
+#------------------------------------------------------------
+# Duvarkağıdını yükle
+#------------------------------------------------------------
+nitrogen --restore &
+
+#------------------------------------------------------------
+# xcompmgr başlat
+#------------------------------------------------------------
+# (sleep 3s &&  xcompmgr -CcfF) &
+# (sleep 3s &&  xcompmgr -c) &
+
+(sleep 3s && nm-applet) &
+(sleep 3s && conky) &
+
+#------------------------------------------------------------
+# Scroll Lock & Numlock başlat
+#------------------------------------------------------------
+xset led named 'Scroll Lock'
+numlockx &
+
+#------------------------------------------------------------
+# Ses ikonunu başlat
+#------------------------------------------------------------
+(sleep 2s && volumeicon) &
+
+#------------------------------------------------------------
+# VirtalBox servisleri başlat
+#------------------------------------------------------------
+# VBoxClient-all &
