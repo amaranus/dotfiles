@@ -1,0 +1,18 @@
+0000000000000000000000000000000000000000 98610fcd37f655d44586323dc86c1d013c2798ce amaranus <amaranus@hotmail.com> 1741991970 +0300	clone: from https://git.suckless.org/st
+98610fcd37f655d44586323dc86c1d013c2798ce 1a89c2e414a2f39f8255ec9ba7f4265795308903 amaranus <amaranus@hotmail.com> 1741992281 +0300	commit: st-scrollback-0.9.2 uygulandi
+1a89c2e414a2f39f8255ec9ba7f4265795308903 f2ae58816e62739ce5bd81b47347d08af85a6e2a amaranus <amaranus@hotmail.com> 1741992344 +0300	commit: st-scrollback-mouse-0.9.2 uygulandi
+f2ae58816e62739ce5bd81b47347d08af85a6e2a 147dc3ccba07121196dc29845ba8454ce7878d4c amaranus <amaranus@hotmail.com> 1741993551 +0300	commit: JetBrainsMono yazı tipi eklendi
+147dc3ccba07121196dc29845ba8454ce7878d4c 8a771a445f5e09ae11211a81b2d42a259b0030ce amaranus <amaranus@hotmail.com> 1741998513 +0300	commit: dracula tema eklendi
+8a771a445f5e09ae11211a81b2d42a259b0030ce a52ad87753492f5b1e2748e7048d085f81cd56ad amaranus <amaranus@hotmail.com> 1741998877 +0300	commit: st-bold-is-not-bright
+a52ad87753492f5b1e2748e7048d085f81cd56ad 116be1707b13fa626ff49de4b0a120ad5f864d84 amaranus <amaranus@hotmail.com> 1742076381 +0300	commit: st-alpha transparent eklendi
+116be1707b13fa626ff49de4b0a120ad5f864d84 4e4ef34d62a7da0f3d405de3d9421fed19050762 amaranus <amaranus@hotmail.com> 1742076516 +0300	revert: Revert "st-bold-is-not-bright"
+4e4ef34d62a7da0f3d405de3d9421fed19050762 a52ad87753492f5b1e2748e7048d085f81cd56ad amaranus <amaranus@hotmail.com> 1742076840 +0300	checkout: moving from master to a52ad87753492f5b1e2748e7048d085f81cd56ad
+a52ad87753492f5b1e2748e7048d085f81cd56ad 4e4ef34d62a7da0f3d405de3d9421fed19050762 amaranus <amaranus@hotmail.com> 1742077341 +0300	checkout: moving from a52ad87753492f5b1e2748e7048d085f81cd56ad to master
+4e4ef34d62a7da0f3d405de3d9421fed19050762 a52ad87753492f5b1e2748e7048d085f81cd56ad amaranus <amaranus@hotmail.com> 1742077455 +0300	checkout: moving from master to a52ad87
+a52ad87753492f5b1e2748e7048d085f81cd56ad 4e4ef34d62a7da0f3d405de3d9421fed19050762 amaranus <amaranus@hotmail.com> 1742077512 +0300	reset: moving to 4e4ef34
+4e4ef34d62a7da0f3d405de3d9421fed19050762 4e4ef34d62a7da0f3d405de3d9421fed19050762 amaranus <amaranus@hotmail.com> 1742077534 +0300	checkout: moving from 4e4ef34d62a7da0f3d405de3d9421fed19050762 to master
+4e4ef34d62a7da0f3d405de3d9421fed19050762 4e4ef34d62a7da0f3d405de3d9421fed19050762 amaranus <amaranus@hotmail.com> 1742077638 +0300	reset: moving to 4e4ef34d62a7da0f3d405de3d9421fed19050762
+4e4ef34d62a7da0f3d405de3d9421fed19050762 a52ad87753492f5b1e2748e7048d085f81cd56ad amaranus <amaranus@hotmail.com> 1742077676 +0300	reset: moving to a52ad87753492f5b1e2748e7048d085f81cd56ad
+a52ad87753492f5b1e2748e7048d085f81cd56ad c5bbbbe8b05089cf45a66f111afd3935a82af36f amaranus <amaranus@hotmail.com> 1742078848 +0300	commit: st-anygeometry boyutlandirma eklendi
+c5bbbbe8b05089cf45a66f111afd3935a82af36f 52ff124cdcef6ee3509c6db6ba9b8e014c8a447c amaranus <amaranus@hotmail.com> 1742139834 +0300	commit: st-xresources Xresources tema kullanma eklendi
+52ff124cdcef6ee3509c6db6ba9b8e014c8a447c 75b0b0f237c4a245d496ac53378a7d0ae909cab5 amaranus <amaranus@hotmail.com> 1742406227 +0300	commit (amend): st-xresources Xresources tema kullanma eklendi

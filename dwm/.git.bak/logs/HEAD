@@ -1,0 +1,14 @@
+0000000000000000000000000000000000000000 cfb8627a80a334f200f68c2c8f3e384313ebbaf5 amaranus <amaranus@hotmail.com> 1741819903 +0300	clone: from https://git.suckless.org/dwm
+cfb8627a80a334f200f68c2c8f3e384313ebbaf5 81f737f06e7e379e34f44819ef32f4244b391e5e amaranus <amaranus@hotmail.com> 1742079144 +0300	commit: mustafa yamasiz stable hal
+81f737f06e7e379e34f44819ef32f4244b391e5e c78f817db340c33714e6193c4a34fca75e60f284 amaranus <amaranus@hotmail.com> 1742079310 +0300	commit: dwm-alwayscenter float iken ortala eklendi
+c78f817db340c33714e6193c4a34fca75e60f284 04199e4a87b9da9a0505369cb325def0289c0db1 amaranus <amaranus@hotmail.com> 1742083754 +0300	commit: dwm-r1615-selfrestart alt-shift-r restart eklendi
+04199e4a87b9da9a0505369cb325def0289c0db1 4212ea93e8ff1029af96cf2033703c286ab839a0 amaranus <amaranus@hotmail.com> 1742086336 +0300	commit: dwm-movestack pencere yer degistirme eklendi
+4212ea93e8ff1029af96cf2033703c286ab839a0 86e0e64d98e76f321ccbadfe2346550c71c5a370 amaranus <amaranus@hotmail.com> 1742208268 +0300	commit: dwm-tilegap-6.4 st yerine xterm ve wpgtk nord renk semasi eklendi
+86e0e64d98e76f321ccbadfe2346550c71c5a370 1b595d6f4e45a58452893c72605860c5382dce78 amaranus <amaranus@hotmail.com> 1742232724 +0300	commit: xterm yerine st konuldu
+1b595d6f4e45a58452893c72605860c5382dce78 159641c006a3fd91bc1152c8831aa031cc6cfb2a amaranus <amaranus@hotmail.com> 1742237824 +0300	commit: pencerelerin ilgili sekmelerde acilmasi eklendi
+159641c006a3fd91bc1152c8831aa031cc6cfb2a 1472831ec59f602dc65d42e56e99d4a61de1a7f0 amaranus <amaranus@hotmail.com> 1742241913 +0300	commit: alt tusu yerine win tusu atandi
+1472831ec59f602dc65d42e56e99d4a61de1a7f0 9f4612b2a27616a1ef44a445fdd493b603409f17 amaranus <amaranus@hotmail.com> 1742245160 +0300	commit: dwm-spawntag taba orta fare ile basinca ilgili tabdaki uygulama acilir
+9f4612b2a27616a1ef44a445fdd493b603409f17 55626757c2c876c3e0076b73f2eeadd6c09f3ea0 amaranus <amaranus@hotmail.com> 1742247875 +0300	commit: dwm-switchtotag acilan pencerinin sekmesine git eklendi
+55626757c2c876c3e0076b73f2eeadd6c09f3ea0 063035322bddb15513b4210895395006b75f92bc amaranus <amaranus@hotmail.com> 1742400956 +0300	commit: alacritty-eklendi
+063035322bddb15513b4210895395006b75f92bc f01ab2bbaea640575d9a52bf95c50ca1629319cd amaranus <amaranus@hotmail.com> 1742405107 +0300	commit (amend): alacritty-eklendi
+f01ab2bbaea640575d9a52bf95c50ca1629319cd 41a10bdc565f304901c868ffbcf351ee718f8d86 amaranus <amaranus@hotmail.com> 1742405208 +0300	commit (amend): alacritty-eklendi

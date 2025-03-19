@@ -62,6 +62,7 @@ Plug 'arcticicestudio/nord-vim', { 'on':  'NERDTreeToggle' }
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'girishji/vimcomplete'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 
 " Renk şemasını ekledim

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+if pgrep -x dwmstatus 2>&1 >/dev/null;
+then
+	printf "Killing old dwmstatus instances ... "
+	pkill -KILL -x dwmstatus
+	printf "done.\n"
+fi
+
+if [ -e $HOME/.xinitrc ];
+then
+	# In case some .xinitrc exists, do try to run dwmstatus as people
+	# run it in their .xinitrc. This is in case some error
+	# redirection is done or logging.
+	{
+		grep dwmstatus $HOME/.xinitrc | sh
+	} &
+else
+	{
+		dwmstatus &
+	} &
+fi
+
