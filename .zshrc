@@ -11,8 +11,12 @@ fi
 # export TERM=xterm-256color
 # export TERM=st-256color
 
+# Go ayarları
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/go
+
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$GOROOT/bin:$GOPATH/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -24,10 +28,11 @@ export FZF_DEFAULT_OPTS="--layout=reverse"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # ZSH_THEME="fino"
-# ZSH_THEME="agnoster"
+# ZSH_THEME="simplerich"
+ ZSH_THEME="cypher"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -185,12 +190,22 @@ alias gcl='git clone'
 alias gc='git checkout'
 alias gca='git commit -v --amend'
 alias gl='git log'
-alias gr='git rm --cached'
+alias grm='git rm --cached'
+alias grs='git restore'
 alias gd='git diff'
 alias gs='git status'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dfd() {
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status --short \
+| fzf --ansi --preview="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff --color=always -- {2}" \
+--with-nth=2.. --preview-window=right:70% \
+| awk '{print $2}' \
+| xargs -r -I {} /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME diff --color -- {}
 
+}
 
+# vim aliases
+alias nim='nvim'
 
 # wpg eklentisi -- st terminal arka planı bozuyor
 # xterm ile çalışıyor. Xresources içerisine renkleri tanımladım
@@ -200,8 +215,10 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-PATH="/home/mstf/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/home/mstf/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/home/mstf/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/home/mstf/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/home/mstf/perl5"; export PERL_MM_OPT;
+#PATH="/home/mstf/perl5/bin${PATH:+:${PATH}}"; export PATH;
+#PERL5LIB="/home/mstf/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+#PERL_LOCAL_LIB_ROOT="/home/mstf/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+#PERL_MB_OPT="--install_base \"/home/mstf/perl5\""; export PERL_MB_OPT;
+#PERL_MM_OPT="INSTALL_BASE=/home/mstf/perl5"; export PERL_MM_OPT;
+
+

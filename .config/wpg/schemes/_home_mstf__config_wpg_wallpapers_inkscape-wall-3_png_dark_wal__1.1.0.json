@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/mstf/.config/wpg/wallpapers/inkscape-wall-3.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#0d0e12",
+        "foreground": "#c0d7d6",
+        "cursor": "#c0d7d6"
+    },
+    "colors": {
+        "color0": "#0d0e12",
+        "color1": "#556D70",
+        "color2": "#627E80",
+        "color3": "#6E8F91",
+        "color4": "#7A9FA0",
+        "color5": "#7DA4A4",
+        "color6": "#8DB9B8",
+        "color7": "#c0d7d6",
+        "color8": "#869695",
+        "color9": "#556D70",
+        "color10": "#627E80",
+        "color11": "#6E8F91",
+        "color12": "#7A9FA0",
+        "color13": "#7DA4A4",
+        "color14": "#8DB9B8",
+        "color15": "#c0d7d6"
+    }
+}

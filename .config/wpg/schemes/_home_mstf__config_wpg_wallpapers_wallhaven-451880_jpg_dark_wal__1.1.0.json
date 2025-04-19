@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/mstf/.config/wpg/wallpapers/wallhaven-451880.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1a1213",
+        "foreground": "#e4d9c7",
+        "cursor": "#e4d9c7"
+    },
+    "colors": {
+        "color0": "#1a1213",
+        "color1": "#8A766A",
+        "color2": "#988575",
+        "color3": "#A6917C",
+        "color4": "#B5A187",
+        "color5": "#CBB695",
+        "color6": "#D3BDA1",
+        "color7": "#e4d9c7",
+        "color8": "#9f978b",
+        "color9": "#8A766A",
+        "color10": "#988575",
+        "color11": "#A6917C",
+        "color12": "#B5A187",
+        "color13": "#CBB695",
+        "color14": "#D3BDA1",
+        "color15": "#e4d9c7"
+    }
+}

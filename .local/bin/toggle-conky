@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Script adı	: toggle-conky
+# Tanım		: conky açıp kapatır
+# Yazar 	: amaranus
+
+myConky="$HOME/.config/conky/Altair/start.sh"
+pgrep -f conky &> /dev/null && killall conky || "$myConky"

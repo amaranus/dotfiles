@@ -156,4 +156,6 @@ configuration {
   }
 }
 
-@theme "/home/mstf/.config/rofi/themes/pywal.rasi"
+//@theme "/home/mstf/.config/rofi/themes/pywal.rasi"
+
+@theme "/home/mstf/.config/rofi/themes/dracula-1.rasi"

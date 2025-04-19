@@ -68,7 +68,8 @@ static const struct arg args[] = {
 	{ keyboard_indicators,   "%s", 	          "N?C?"		 },
 	{ run_command,           "| %s",  	  "curl -s www.icanhazip.com"	},
 	{ ipv4,                  "| %s",         "enp3s0"      },
-	{ run_command,           "|%s",           "pacmd list-sinks | grep -A 15 '* index' | awk '/muted:/{ print $2 }' | grep -q 'yes' && echo '' || echo ''" },
+/*	{ run_command,           "|%s",           "pacmd list-sinks | grep -A 15 '* index' | awk '/muted:/{ print $2 }' | grep -q 'yes' && echo '' || echo ''" },*/
+	{ run_command,           "|%s",           "pactl list sinks | grep -A 15 'Sink #.*' | awk '/Mute:/{ print $2 }' | grep -q 'yes' && echo '' || echo ''\n" },
 	{ run_command,           "|%s%%",         "pamixer --get-volume" },
 	{ load_avg,              "| %s",         NULL        },
 	{ disk_used,             "| %s%%",       "/"         },

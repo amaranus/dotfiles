@@ -7,3 +7,5 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
+
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$GOROOT/bin:$GOPATH/bin:$PATH"
