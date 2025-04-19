@@ -7,6 +7,8 @@ static const char *upvol[]      = { "/usr/bin/pactl",   "set-sink-volume", "@DEF
 static const char *downvol[]    = { "/usr/bin/pactl",   "set-sink-volume", "@DEFAULT_SINK@",      "-5%",      NULL };
 static const char *mutevol[]    = { "/usr/bin/pactl",   "set-sink-mute",   "@DEFAULT_SINK@",      "toggle",   NULL };
 
+#include "/home/mstf/dwm/colors.h"
+
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 18;       /* gap pixel between windows */
@@ -15,18 +17,6 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Terminus:size=13" };
 static const char dmenufont[]       = "Terminus:size=13";
-
-static const char norm_fg[] = "#bed5d4";
-static const char norm_bg[] = "#1b1e25";
-static const char norm_border[] = "#859594";
-
-static const char sel_fg[] = "#bed5d4";
-static const char sel_bg[] = "#627D81";
-static const char sel_border[] = "#bed5d4";
-
-static const char urg_fg[] = "#bed5d4";
-static const char urg_bg[] = "#607C7F";
-static const char urg_border[] = "#607C7F";
 
 static const char *colors[][3]      = {
     /*               fg           bg         border                         */
@@ -45,18 +35,18 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class         instance    title       tags mask    switchtotag   isfloating   monitor */
-	{ "Gimp",        NULL,       NULL,       0,             1,          1,           -1 },
-	{ "St",          NULL,       NULL,       1,             1,          0,           -1 },
-	{ "XTerm",       NULL,       NULL,       1,             1,          0,           -1 },
-	{ "Alacritty",   NULL,       NULL,       1,             1,          0,           -1 },
-	{ "firefox",     NULL,       NULL,       1 << 1,        1,          0,           -1 },
-	{ "Geany",       NULL,       NULL,       1 << 2,        1,          0,           -1 },
-	{ "Nemo",        NULL,       NULL,       1 << 3,        1,          0,           -1 },
+	/* class            instance    title       tags mask    switchtotag   isfloating   monitor */
+	{ "Gimp",           NULL,       NULL,       0,             1,          1,           -1 },
+	{ "St",             NULL,       NULL,       1,             1,          0,           -1 },
+	{ "XTerm",          NULL,       NULL,       1,             1,          0,           -1 },
+	{ "Alacritty",      NULL,       NULL,       1,             1,          0,           -1 },
+	{ "firefox",        NULL,       NULL,       1 << 1,        1,          0,           -1 },
+	{ "Geany",          NULL,       NULL,       1 << 2,        1,          0,           -1 },
+	{ "Nemo",           NULL,       NULL,       1 << 3,        1,          0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.5;  /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -92,13 +82,13 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 
 
 /*static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };*/
-static const char *dmenucmd[]    = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", sel_fg, "-sb", norm_border, "-sf", sel_fg, NULL };
-static const char *termcmd[]     = { "alacritty", NULL };
+static const char *dmenucmd[]    = { "dmenu_run","-l", "10", "-m", dmenumon, "-fn", dmenufont, "-nb", norm_bg, "-nf", sel_fg, "-sb", norm_border, "-sf", norm_bg, NULL };
+static const char *termcmd[]     = { "st", NULL };
 static const char *firefoxcmd[]  = { "firefox", NULL };
 static const char *nemocmd[]     = { "nemo", NULL };
 static const char *geanycmd[]    = { "geany", NULL };
 static const char *roficmd[]     = { "rofi", "-modes", "window,run,ssh,filebrowser", "-show", "run", NULL };
-static const char *fzfcmd[]      = { "alacritty", "-o", "window.dimensions = { columns = 150, lines = 40 }", "--command", "/home/mstf/.config/i3/scripts/fzf-preview.sh" , NULL };
+static const char *fzfcmd[]      = { "st", "-g", "150x40", "bash", "-c", "/home/mstf/.config/i3/scripts/fzf-preview.sh" , NULL };
 
 #include "selfrestart.c"
 #include "movestack.c"
@@ -123,10 +113,9 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = firefoxcmd } },
-	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = nemocmd } },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = fzfcmd } },
 	{ MODKEY|ShiftMask,             XK_e,      spawn,          {.v = geanycmd } },
 	{ MODKEY,                       XK_r,      spawn,          {.v = roficmd } },
-	{ CTRLKEY,                      XK_space,  spawn,          {.v = fzfcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Down,   focusstack,     {.i = +1 } },

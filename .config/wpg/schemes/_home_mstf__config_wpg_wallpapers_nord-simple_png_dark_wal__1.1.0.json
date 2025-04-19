@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/mstf/.config/wpg/wallpapers/nord-simple.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1b1e25",
+        "foreground": "#bed5d4",
+        "cursor": "#bed5d4"
+    },
+    "colors": {
+        "color0": "#1b1e25",
+        "color1": "#607C7F",
+        "color2": "#627D81",
+        "color3": "#709194",
+        "color4": "#7A9FA0",
+        "color5": "#7DA3A4",
+        "color6": "#8CB8B7",
+        "color7": "#bed5d4",
+        "color8": "#859594",
+        "color9": "#607C7F",
+        "color10": "#627D81",
+        "color11": "#709194",
+        "color12": "#7A9FA0",
+        "color13": "#7DA3A4",
+        "color14": "#8CB8B7",
+        "color15": "#bed5d4"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/mstf/.config/wpg/wallpapers/1920x1080.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#12100f",
+        "foreground": "#9dbde1",
+        "cursor": "#9dbde1"
+    },
+    "colors": {
+        "color0": "#12100f",
+        "color1": "#36383C",
+        "color2": "#243447",
+        "color3": "#304F72",
+        "color4": "#37659E",
+        "color5": "#3F74B6",
+        "color6": "#4076B8",
+        "color7": "#9dbde1",
+        "color8": "#6d849d",
+        "color9": "#36383C",
+        "color10": "#243447",
+        "color11": "#304F72",
+        "color12": "#37659E",
+        "color13": "#3F74B6",
+        "color14": "#4076B8",
+        "color15": "#9dbde1"
+    }
+}

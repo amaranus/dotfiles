@@ -54,7 +54,7 @@ bindsym $mod+Shift+Return exec firefox
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 #bindsym $mod+Return exec --no-startup-id xterm -name terminal -geometry 150x40
-bindsym $mod+Return exec --no-startup-id xterm -geometry 150x40
+bindsym $mod+Return exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+q kill
@@ -68,7 +68,7 @@ bindsym $mod+q kill
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-bindsym $mod+d exec --no-startup-id rofi -combi-modi window#drun#ssh -show combi -show-icons
+bindsym $mod+p exec --no-startup-id rofi -combi-modi window#drun#ssh -show combi -show-icons
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
@@ -165,16 +165,20 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 focus_on_window_activation focus
 assign [instance="^fzf-menu$"] $ws10
 assign [class="XTerm"] $ws1
-assign [class="st"] $ws1
+assign [class="St"] $ws1
+assign [class="Alacritty"] $ws1
 assign [class="Nemo"] $ws2  
 assign [class="firefox"] $ws3
+assign [class="Brave-browser"] $ws3
+assign [class="Chromium"] $ws3
 assign [class="Geany"] $ws4
 assign [class=".*"] $ws5
 
 # Focus applications on activate
 for_window [instance="fzf-menu"] focus ; floating enable 
 for_window [class="XTerm"] focus ; floating enable
-for_window [class="st"] focus ; floating enable
+for_window [class="St"] focus ; floating enable
+for_window [class="Alacritty"] focus ; floating enable
 for_window [class="Nemo"] focus
 for_window [class="firefox"] focus
 for_window [class="Geany"] focus
@@ -184,7 +188,7 @@ for_window [class=".*"] focus
 #bindsym $mod+Shift+f exec xterm -e bash -c 'nvim $(find . -type d | fzf --preview "bat --color=always {}")'
 #bindsym $mod+Shift+f exec --no-startup-id xterm -e bash -c 'nvim $(fzf --preview "fzf-preview.sh {}")'
 #bindsym $mod+Shift+f exec --no-startup-id xterm -e bash -c '~/.config/i3/scripts/explorer'
-bindsym $mod+Shift+f exec --no-startup-id xterm -geometry 150x40 -e bash -c '~/.config/i3/scripts/fzf-preview.sh' 
+bindsym $mod+Shift+f exec --no-startup-id st -g 150x40 -e bash -c '~/.config/i3/scripts/fzf-preview.sh' 
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -300,3 +304,6 @@ exec_always --no-startup-id ~/.fehbg &
 
 # Picom başlat
 exec_always --no-startup-id picom --config ~/.config/picom.conf --daemon &
+
+# Polkit başlat
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & 
